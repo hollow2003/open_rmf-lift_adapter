@@ -1,0 +1,55 @@
+ 
+# RMF door adapter parameters
+
+### template ###
+
+api:
+  appId: "68518620319745" 
+  appSecret: "8288EC12D8CFC60D"
+  appCode: “00004V3”
+  test_robotId: '000018426020'
+## Should be one of the enabled robotIds which used to test connection
+  projectId: '00001842'
+## Test api,change them if neccessary
+
+fleet_subscriber:
+  topic_name: "fleet_states"
+
+lift_subscriber:
+  topic_name: "adapter_lift_requests"
+
+door_supervisor_heartbeat_publisher:
+  topic_name: "door_supervisor_heartbeat"
+
+door_publisher:
+  topic_name: "door_states"
+  door_state_publish_period: 1.0 # Seconds
+
+lift_publisher:
+  topic_name: "lift_states"
+  lift_state_publish_period: 1.0 # Seconds
+  
+door_requests_publisher:
+  topic_name: "door_requests"
+
+lift_requests_publisher:
+  topic_name: "lift_requests"
+
+robot_floor_through_subscriber:
+  topic_name: "robot_floor_through"
+## Neccessary publisher and subscriber infomation
+
+robotinfo: 
+    - {robotId: '000018426020',requester_id: 'tinyRobot/tinyBot_1',token: '',floor: '0',intask: 0,through_floors: []}
+    - {robotId: '000018426021',requester_id: 'tinyRobot/tinyRobot2',token: '',floor: '0',intask: 0,through_floors: []}
+    - {robotId: '000018426022',requester_id: 'door_panel_requester',token: '',floor: '0',intask: 0,through_floors: []}
+## Map from requester_id to robotId
+
+
+liftinfo: 
+    - {lift_name: 'Lift1',now: '1',deviceUnique: '0000184210001',intask: 0,robotId: '',token: '',available_floors: ['1','2','3'],available modes: [],session_id: '',to: '1',from: '1',door_state: 0,currtent_mode: 2,motion_state: 0,step: '',keep_open: '0'}
+    - {lift_name: 'Lift2',now: '1',deviceUnique: '0000184210003',intask: 0,robotId: '',token: '',available_floors: ['1','2','3'],available modes: [],session_id: '',to: '1',from: '1',door_state: 0,currtent_mode: 2,motion_state: 0,step: '',keep_open: '0'}
+##name need to be big write
+
+
+
